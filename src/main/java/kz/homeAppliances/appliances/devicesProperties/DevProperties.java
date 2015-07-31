@@ -21,11 +21,11 @@ public class DevProperties {
             Properties properties = new Properties();
             FileInputStream fis = new FileInputStream("devices.txt");
             properties.load(fis);
-            priceFromFile.put(TypeDevices.COMPUTER, Integer.valueOf(properties.getProperty(TypeDevices.COMPUTER.name())));
-            priceFromFile.put(TypeDevices.COOKER, Integer.valueOf(properties.getProperty(TypeDevices.COOKER.name())));
-            priceFromFile.put(TypeDevices.KETTLE, Integer.valueOf(properties.getProperty(TypeDevices.KETTLE.name())));
-            priceFromFile.put(TypeDevices.LAMP, Integer.valueOf(properties.getProperty(TypeDevices.LAMP.name())));
-            priceFromFile.put(TypeDevices.TV, Integer.valueOf(properties.getProperty(TypeDevices.TV.name())));
+            for (int i = 0; i < TypeDevices.values().length; i++) {
+                priceFromFile.put(TypeDevices.values()[i],
+                        Integer.valueOf(properties.getProperty(
+                                TypeDevices.values()[i].name())));
+            }
         } catch (IOException e) {
             throw new LoadPropFromFileException("Error with loading file");
         }
