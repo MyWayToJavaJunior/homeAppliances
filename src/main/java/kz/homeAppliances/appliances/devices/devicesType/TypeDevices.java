@@ -1,4 +1,4 @@
-package kz.homeAppliances.appliances.devices.type;
+package kz.homeAppliances.appliances.devices.devicesType;
 
 /**
  * Тип прибора

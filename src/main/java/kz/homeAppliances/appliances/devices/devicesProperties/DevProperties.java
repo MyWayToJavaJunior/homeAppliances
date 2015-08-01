@@ -1,6 +1,6 @@
-package kz.homeAppliances.appliances.devicesProperties;
+package kz.homeAppliances.appliances.devices.devicesProperties;
 
-import kz.homeAppliances.appliances.devices.type.TypeDevices;
+import kz.homeAppliances.appliances.devices.devicesType.TypeDevices;
 import kz.homeAppliances.appliances.exceptions.LoadPropFromFileException;
 
 import java.io.FileInputStream;

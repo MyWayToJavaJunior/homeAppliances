@@ -1,0 +1,25 @@
+package kz.homeAppliances.appliances.devices;
+
+import kz.homeAppliances.appliances.devices.devicesPlug.TypePlug;
+import kz.homeAppliances.appliances.devices.devicesType.TypeDevices;
+
+/**
+ * Устрйоство с трех-пиновой
+ * розеткой
+ */
+public class ThreepinDevice extends Device{
+    private TypePlug typePlug;
+    public ThreepinDevice(TypeDevices typeOfDevice,
+                          boolean stateOfDevice, TypePlug typePlug) {
+        super(typeOfDevice, stateOfDevice);
+        this.typePlug = typePlug;
+    }
+
+    public TypePlug getPlug() {
+        return typePlug;
+    }
+
+    public void setPlug(TypePlug typePlug) {
+        this.typePlug = typePlug;
+    }
+}

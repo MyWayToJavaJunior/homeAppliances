@@ -1,8 +1,9 @@
 package kz.homeAppliances.appliances;
 
 import kz.homeAppliances.appliances.devices.IDevice;
-import kz.homeAppliances.appliances.devicesGenerator.Generate;
-import kz.homeAppliances.appliances.devicesProperties.DevProperties;
+import kz.homeAppliances.appliances.devices.devicesGenerator.GenerateDevices;
+import kz.homeAppliances.appliances.devices.devicesPlug.TypePlug;
+import kz.homeAppliances.appliances.devices.devicesProperties.DevProperties;
 import kz.homeAppliances.appliances.exceptions.LoadPropFromFileException;
 
 import java.util.ArrayList;
@@ -99,7 +100,7 @@ public class Run {
             System.out.println(e.getMessage());
             System.exit(0);
         }
-        Generate generate = new Generate(devices);
+        GenerateDevices generate = new GenerateDevices(devices);
         generate.add(10);
         System.out.println("\nGenerated:");
         System.out.println(getArrayAsString(devices));

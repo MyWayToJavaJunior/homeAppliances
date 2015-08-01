@@ -1,5 +1,7 @@
 package kz.homeAppliances.appliances.devices;
 
+import kz.homeAppliances.appliances.devices.devicesPlug.TypePlug;
+
 /**
  * Типизирующий интерфейс
  */
@@ -19,4 +21,19 @@ public interface IDevice {
      * @return мощность прибора
      */
     int getPower();
+
+    /**
+     * Получить название розетки.
+     *
+     * @return нахвание розетки
+     */
+    TypePlug getPlug();
+
+    /**
+     * Установить название розетки.
+     *
+     * @param plug новое название
+     *             розетки
+     */
+    void setPlug(TypePlug plug);
 }

@@ -1,13 +1,13 @@
 package kz.homeAppliances.appliances.devices;
 
-import kz.homeAppliances.appliances.devices.type.TypeDevices;
-import kz.homeAppliances.appliances.devicesProperties.DevProperties;
+import kz.homeAppliances.appliances.devices.devicesType.TypeDevices;
+import kz.homeAppliances.appliances.devices.devicesProperties.DevProperties;
 
 /**
  * Описание прибора.
  *
  */
-public class Device implements IDevice {
+public abstract class Device implements IDevice {
     private final TypeDevices typeOfDevice;
     private final int powerOfDevice;
     private boolean stateOfDevice;
@@ -37,8 +37,9 @@ public class Device implements IDevice {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("(").append(typeOfDevice)
-                .append(" : ").append(powerOfDevice).append(" : ")
+        sb.append("(").append(this.typeOfDevice)
+                .append(" : ").append(this.getPlug()).append(" : ")
+                .append(this.powerOfDevice).append(" : ")
                 .append(this.isOn()? "on" : "off").append(")");
         return sb.toString();
     }
