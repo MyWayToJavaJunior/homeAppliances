@@ -4,7 +4,7 @@ import kz.homeAppliances.appliances.devices.devicesPlug.TypePlug;
 import kz.homeAppliances.appliances.devices.devicesType.TypeDevices;
 
 /**
- * Устрйоство с трех-пиновой
+ * Устройство с трех-пиновой
  * розеткой
  */
 public class ThreepinDevice extends Device{
