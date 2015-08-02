@@ -23,17 +23,16 @@ public interface IDevice {
     int getPower();
 
     /**
-     * Получить название розетки.
+     * Получить текущую розетку.
      *
-     * @return нахвание розетки
+     * @return текущую розетку
      */
     TypePlug getPlug();
 
     /**
-     * Установить название розетки.
+     * Установить новую розетку.
      *
-     * @param plug новое название
-     *             розетки
+     * @param plug новая розетка
      */
     void setPlug(TypePlug plug);
 }
